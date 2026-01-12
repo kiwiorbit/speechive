@@ -3,9 +3,7 @@ import React, { useState } from 'react';
 import { Page, StrategyChallenge, NaturalisticStrategyType, UserInfo } from '../types';
 import Card from './Card';
 import Modal from './Modal';
-
-// --- DEV TOGGLE ---
-const DEV_UNLOCK_CERTIFICATES = true; // Set to true to unlock print buttons for testing
+import { IS_DEV_MODE } from '../constants';
 
 interface HoneyStorePageProps {
     setActivePage: (page: Page) => void;
@@ -47,7 +45,7 @@ const StrategyRedeemCard: React.FC<{
     const hasFinishedDuration = daysPassed >= MIN_DAYS;
     
     const isEligible = hasEnoughActivities; // Hit the 40 mark
-    const canClaim = (hasEnoughActivities && hasFinishedDuration) || DEV_UNLOCK_CERTIFICATES;
+    const canClaim = (hasEnoughActivities && hasFinishedDuration) || IS_DEV_MODE;
 
     // Check Redemption State
     const redemptionTime = userInfo?.redeemedStrategies?.[challenge.type];
@@ -105,7 +103,7 @@ const StrategyRedeemCard: React.FC<{
 
                     <button
                         onClick={handleButtonClick}
-                        disabled={isExpired || (!isEligible && !DEV_UNLOCK_CERTIFICATES)}
+                        disabled={isExpired || (!isEligible && !IS_DEV_MODE)}
                         className={`w-full py-2 px-3 rounded-lg text-sm font-bold shadow-sm transition-all flex items-center justify-center gap-2
                             ${isExpired
                                 ? 'bg-gray-400 text-white cursor-not-allowed border-none' // Claimed & Expired
