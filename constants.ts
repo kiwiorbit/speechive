@@ -14,7 +14,7 @@ import { ARTICLES } from './data/resources';
 // 4. Unlock Certificate Buttons (HoneyStorePage.tsx)
 // 5. Show Dummy Certificate Data (VoucherPage.tsx)
 // 6. Show Reset Button (SettingsPage.tsx)
-export const IS_DEV_MODE = false; 
+export const IS_DEV_MODE = true; 
 
 // Re-export specific pools so they can be imported from here if needed, 
 // though direct import from data/ is preferred for new components.
