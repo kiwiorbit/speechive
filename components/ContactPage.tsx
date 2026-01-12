@@ -1,7 +1,8 @@
 
 import React, { useState } from 'react';
 import { Page } from '../types';
-import emailjs from '@emailjs/browser';
+// UNCOMMENT THE LINE BELOW AFTER RUNNING: npm install @emailjs/browser
+// import emailjs from '@emailjs/browser';
 
 interface ContactPageProps {
     setActivePage: (page: Page) => void;
@@ -23,8 +24,8 @@ const ContactPage: React.FC<ContactPageProps> = ({ setActivePage }) => {
     // 2. Template ID from your prompt
     const TEMPLATE_ID = 'template_dx1ihb1';
 
-    // 3. YOUR PUBLIC KEY (Account -> API Keys)
-    const PUBLIC_KEY = 'x4W9n_2fukvAC5Q55'; 
+    // 3. YOUR PUBLIC KEY (Found in EmailJS Dashboard -> Account -> API Keys)
+    const PUBLIC_KEY = 'YOUR_PUBLIC_KEY_HERE'; 
 
     const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
         const { name, value } = e.target;
@@ -60,12 +61,20 @@ const ContactPage: React.FC<ContactPageProps> = ({ setActivePage }) => {
         };
 
         try {
+            // --- UNCOMMENT THIS BLOCK TO ENABLE REAL EMAIL SENDING ---
+            /*
             await emailjs.send(
                 SERVICE_ID,
                 TEMPLATE_ID,
                 templateParams,
                 PUBLIC_KEY
             );
+            */
+            
+            // --- SIMULATION (REMOVE THIS WHEN DEPLOYING) ---
+            console.log("Simulating EmailJS send...", templateParams);
+            await new Promise(resolve => setTimeout(resolve, 1500));
+            // -----------------------------------------------------
 
             setStatus('success');
             setFormData({ name: '', email: '', message: '', researchConsent: false });
