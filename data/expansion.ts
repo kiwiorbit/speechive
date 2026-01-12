@@ -5,7 +5,7 @@ export const EXPANSION_ACTIVITY_POOL: Activity[] = [
   {
     id: 'exp-pool-1',
     title: 'Mealtimes & Snacks',
-    image: '/public/images/activities/expansion/mealtimes.webp',
+    image: './public/images/activities/expansion/mealtimes.webp',
     description: "Use breakfast, lunch, dinner, or snacks to expand on words about food, taste, temperature, and utensils.",
     completed: false,
     duration: 0,
