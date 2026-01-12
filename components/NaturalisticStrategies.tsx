@@ -6,7 +6,7 @@ import { NATURALISTIC_STRATEGIES } from '../constants';
 
 // --- DEV TOGGLES ---
 // Master switch to unlock everything
-const DEV_UNLOCK_ALL = true;
+const DEV_UNLOCK_ALL = false;
 
 // Individual switches for development (set to true to unlock specific cards without completing previous ones)
 const DEV_UNLOCK_RECAST = false;
