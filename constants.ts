@@ -6,6 +6,16 @@ import { OPENEQ_ACTIVITY_POOL } from './data/openeq';
 import { COMMENT_ACTIVITY_POOL } from './data/comment';
 import { ARTICLES } from './data/resources';
 
+// --- MASTER DEV TOGGLE ---
+// Set to true to enable ALL development features:
+// 1. Skip Onboarding (App.tsx)
+// 2. Bypass Redeem Requirements (App.tsx)
+// 3. Unlock All Strategies (NaturalisticStrategies.tsx)
+// 4. Unlock Certificate Buttons (HoneyStorePage.tsx)
+// 5. Show Dummy Certificate Data (VoucherPage.tsx)
+// 6. Show Reset Button (SettingsPage.tsx)
+export const IS_DEV_MODE = false; 
+
 // Re-export specific pools so they can be imported from here if needed, 
 // though direct import from data/ is preferred for new components.
 export { EXPANSION_ACTIVITY_POOL, RECAST_ACTIVITY_POOL, OPENEQ_ACTIVITY_POOL, COMMENT_ACTIVITY_POOL, ARTICLES };
