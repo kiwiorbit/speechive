@@ -495,8 +495,26 @@ const App: React.FC = () => {
     handlePageChange(Page.Voucher);
   };
 
-  const updateRole = (role: 'participant', code: string) => {
-      setUserInfo(prev => prev ? ({ ...prev, role, programCode: code }) : null);
+  const updateRole = (role: 'participant', code: string, email?: string) => {
+      setUserInfo(prev => {
+          if (!prev) return null;
+          
+          let newUsername = prev.username;
+          
+          // If previously a guest (generic username or no email), update with new email
+          if (email && (prev.username === 'Guest' || prev.username === 'Guest_Parent' || !prev.email)) {
+              newUsername = email.split('@')[0];
+          }
+
+          return { 
+              ...prev, 
+              role, 
+              programCode: code,
+              email: email || prev.email,
+              username: newUsername
+          };
+      });
+      
       if (role === 'participant') {
           setShowWelcomeUnlock(true);
       }
@@ -679,7 +697,7 @@ const App: React.FC = () => {
         return challenge ? <StrategyAnalysis challenge={challenge} setActivePage={handlePageChange} /> : <ProgressTracker userInfo={userInfo} strategyChallengesData={strategyChallengesData} setActivePage={handlePageChange} onViewStrategyDetails={handleViewStrategyDetails} />;
       }
       case Page.Settings:
-        return <SettingsPage onResetProgress={handleResetProgress} setActivePage={handlePageChange} areAnimationsEnabled={areAnimationsEnabled} toggleAnimations={() => setAreAnimationsEnabled(p => !p)} userInfo={userInfo} onUpgrade={(code) => updateRole('participant', code)} />;
+        return <SettingsPage onResetProgress={handleResetProgress} setActivePage={handlePageChange} areAnimationsEnabled={areAnimationsEnabled} toggleAnimations={() => setAreAnimationsEnabled(p => !p)} userInfo={userInfo} onUpgrade={(code, email) => updateRole('participant', code, email)} />;
       case Page.Checklist:
         return <ChecklistPage onAllCompleted={handleChecklistComplete} />;
       case Page.Badges:
