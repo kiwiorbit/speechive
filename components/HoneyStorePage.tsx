@@ -5,7 +5,7 @@ import Card from './Card';
 import Modal from './Modal';
 
 // --- DEV TOGGLE ---
-const DEV_UNLOCK_CERTIFICATES = false; // Set to true to unlock print buttons for testing
+const DEV_UNLOCK_CERTIFICATES = true; // Set to true to unlock print buttons for testing
 
 interface HoneyStorePageProps {
     setActivePage: (page: Page) => void;
