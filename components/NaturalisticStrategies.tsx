@@ -2,16 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import Card from './Card';
 import { NaturalisticStrategyType, StrategyChallenge } from '../types';
-import { NATURALISTIC_STRATEGIES } from '../constants';
-
-// --- DEV TOGGLES ---
-// Master switch to unlock everything
-const DEV_UNLOCK_ALL = false;
-
-// Individual switches for development (set to true to unlock specific cards without completing previous ones)
-const DEV_UNLOCK_RECAST = false;
-const DEV_UNLOCK_OPEN_EQ = false;
-const DEV_UNLOCK_COMMENT = false;
+import { NATURALISTIC_STRATEGIES, IS_DEV_MODE } from '../constants';
 
 interface NaturalisticStrategiesProps {
   onSelectCategory: (category: NaturalisticStrategyType) => void;
@@ -126,20 +117,10 @@ const NaturalisticStrategies: React.FC<NaturalisticStrategiesProps> = ({ onSelec
               isLocked = false;
           }
           // 2. Check Master Developer Override
-          else if (DEV_UNLOCK_ALL) {
+          else if (IS_DEV_MODE) {
               isLocked = false;
           }
-          // 3. Check Individual Developer Overrides
-          else if (strategy.type === NaturalisticStrategyType.Recast && DEV_UNLOCK_RECAST) {
-              isLocked = false;
-          }
-          else if (strategy.type === NaturalisticStrategyType.OpenEQ && DEV_UNLOCK_OPEN_EQ) {
-              isLocked = false;
-          }
-          else if (strategy.type === NaturalisticStrategyType.Comment && DEV_UNLOCK_COMMENT) {
-              isLocked = false;
-          }
-          // 4. Check Progression (Unlock if previous strategy is complete)
+          // 3. Check Progression (Unlock if previous strategy is complete)
           else {
               const previousStrategy = NATURALISTIC_STRATEGIES[index - 1];
               if (previousStrategy && isStrategyComplete(previousStrategy.type)) {
