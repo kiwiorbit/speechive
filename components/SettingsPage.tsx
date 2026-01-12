@@ -2,12 +2,7 @@
 import React, { useState, ReactNode } from 'react';
 import Modal from './Modal';
 import { Page, UserInfo } from '../types';
-
-// --- MASTER TOGGLE FOR RESET BUTTON ---
-// Set this to true only during development or if explicit manual reset is required.
-// Users should generally reset by clearing browser data/app cache.
-const SHOW_RESET_BUTTON = false; 
-// --------------------------------------
+import { IS_DEV_MODE } from '../constants';
 
 interface FaqItem {
     id: number;
@@ -193,7 +188,7 @@ const SettingsPage: React.FC<SettingsPageProps> = ({ onResetProgress, setActiveP
       </div>
 
       {/* Manual Reset Button - Only shown if master toggle is enabled */}
-      {SHOW_RESET_BUTTON && (
+      {IS_DEV_MODE && (
           <div className="mt-8 pt-8 border-t border-gray-200">
             <h3 className="font-bold text-lg mb-3 text-rose-800">Danger Zone</h3>
             <div className="flex justify-between items-center p-4 bg-rose-50 rounded-lg border border-rose-100">
