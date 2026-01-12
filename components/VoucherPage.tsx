@@ -4,9 +4,7 @@ import { Page, VoucherInfo, UserInfo, StrategyChallenge, Activity, NaturalisticS
 import BeeLogo from './BeeLogo';
 import Card from './Card';
 import { BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer, CartesianGrid, Cell } from 'recharts';
-
-// --- DEV TOGGLE ---
-const DEV_SHOW_DUMMY_CERTIFICATE_DATA = false; // Set to true to populate charts with 30-day dummy data
+import { IS_DEV_MODE } from '../constants';
 
 interface VoucherPageProps {
   voucher: VoucherInfo;
@@ -136,7 +134,7 @@ const VoucherPage: React.FC<VoucherPageProps> = ({ voucher, setActivePage, userI
   const strategyData = useMemo(() => {
       const realData = strategyChallengesData.find(s => s.title === voucher.strategyTitle);
 
-      if (DEV_SHOW_DUMMY_CERTIFICATE_DATA && realData) {
+      if (IS_DEV_MODE && realData) {
           const activityNames = ["Reading Time", "Bath Time", "Meal Time", "Outdoor Play", "Building Blocks", "Getting Dressed", "Singing Songs", "Puzzle Time"];
           
           // Generate dummy 30-day data
