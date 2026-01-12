@@ -5,7 +5,7 @@ export const EXPANSION_ACTIVITY_POOL: Activity[] = [
   {
     id: 'exp-pool-1',
     title: 'Mealtimes & Snacks',
-    image: 'https://picsum.photos/seed/exp-mealtimes/800/600',
+    image: '/images/activities/expansion/mealtimes.webp',
     description: "Use breakfast, lunch, dinner, or snacks to expand on words about food, taste, temperature, and utensils.",
     completed: false,
     duration: 0,
@@ -45,7 +45,7 @@ export const EXPANSION_ACTIVITY_POOL: Activity[] = [
   {
     id: 'exp-pool-2',
     title: 'Bath Time',
-    image: 'https://picsum.photos/seed/exp-bathtime/800/600',
+    image: '/images/activities/expansion/bathtime.webp',
     description: "Expand on vocabulary related to water, bubbles, washing body parts, and bath toys in this relaxed setting.",
     completed: false,
     duration: 0,
@@ -86,7 +86,7 @@ export const EXPANSION_ACTIVITY_POOL: Activity[] = [
   {
     id: 'exp-pool-3',
     title: 'Morning & Bedtime',
-    image: 'https://picsum.photos/seed/exp-dressing/800/600',
+    image: '/images/activities/expansion/dressing.webp',
     description: "Talk about making bed, brushing, clothing items, colors, and body parts while getting dressed.",
     completed: false,
     duration: 0,
@@ -128,7 +128,7 @@ export const EXPANSION_ACTIVITY_POOL: Activity[] = [
   {
     id: 'exp-pool-4',
     title: 'Household Chores',
-    image: 'https://picsum.photos/seed/exp-chores/800/600',
+    image: '/images/activities/expansion/chores.webp',
     description: "Involve your child in simple chores like sorting laundry.",
     completed: false,
     duration: 0,
@@ -171,7 +171,7 @@ export const EXPANSION_ACTIVITY_POOL: Activity[] = [
   {
     id: 'exp-pool-5',
     title: 'Reading Together',
-    image: 'https://picsum.photos/seed/exp-reading/800/600',
+    image: '/images/activities/expansion/reading.webp',
     description: "Expand on the pictures in a book. Add details about characters.",
     completed: false,
     duration: 0,
@@ -212,7 +212,7 @@ export const EXPANSION_ACTIVITY_POOL: Activity[] = [
   {
     id: 'exp-pool-6',
     title: 'Pretend Play',
-    image: 'https://picsum.photos/seed/exp-pretend/800/600',
+    image: '/images/activities/expansion/pretend.webp',
     description: "Join in imaginative play with dolls, cars, or kitchen sets.",
     completed: false,
     duration: 0,
@@ -255,7 +255,7 @@ export const EXPANSION_ACTIVITY_POOL: Activity[] = [
   {
     id: 'exp-pool-7',
     title: 'Building Blocks',
-    image: 'https://picsum.photos/seed/exp-blocks/800/600',
+    image: '/images/activities/expansion/blocks.webp',
     description: "Build towers or structures together. Expand on concepts like size.",
     completed: false,
     duration: 0,
@@ -297,7 +297,7 @@ export const EXPANSION_ACTIVITY_POOL: Activity[] = [
   {
     id: 'exp-pool-8',
     title: 'Pet Care',
-    image: 'https://picsum.photos/seed/exp-pets/800/600',
+    image: '/images/activities/expansion/pets.webp',
     description: "Involve your child in feeding or grooming a pet.",
     completed: false,
     duration: 0,
@@ -338,7 +338,7 @@ export const EXPANSION_ACTIVITY_POOL: Activity[] = [
   {
     id: 'exp-pool-9',
     title: 'Outdoor Walk',
-    image: 'https://picsum.photos/seed/exp-outdoor/800/600',
+    image: '/images/activities/expansion/outdoor.webp',
     description: "Explore nature, the park, or the backyard. Expand on observations.",
     completed: false,
     duration: 0,
@@ -379,7 +379,7 @@ export const EXPANSION_ACTIVITY_POOL: Activity[] = [
   {
     id: 'exp-pool-10',
     title: 'Grocery Shopping',
-    image: 'https://picsum.photos/seed/exp-shopping/800/600',
+    image: '/images/activities/expansion/shopping.webp',
     description: "Turn a shopping trip into a language lesson.",
     completed: false,
     duration: 0,

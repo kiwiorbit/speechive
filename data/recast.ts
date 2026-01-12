@@ -5,7 +5,7 @@ export const RECAST_ACTIVITY_POOL: Activity[] = [
   {
     id: 'rec-pool-1',
     title: 'Mealtimes & Snacks',
-    image: 'https://picsum.photos/seed/rec-mealtimes/800/600',
+    image: '/images/activities/recast/mealtimes.webp',
     description: "Recast requests and comments during meals into questions.",
     completed: false,
     duration: 0,
@@ -45,7 +45,7 @@ export const RECAST_ACTIVITY_POOL: Activity[] = [
   {
     id: 'rec-pool-2',
     title: 'Bath Time',
-    image: 'https://picsum.photos/seed/rec-bathtime/800/600',
+    image: '/images/activities/recast/bathtime.webp',
     description: "Recast actions and feelings during bath time into questions.",
     completed: false,
     duration: 0,
@@ -86,7 +86,7 @@ export const RECAST_ACTIVITY_POOL: Activity[] = [
   {
     id: 'rec-pool-3',
     title: 'Morning or Bedtime',
-    image: 'https://picsum.photos/seed/rec-dressing/800/600',
+    image: '/images/activities/recast/dressing.webp',
     description: "Recast during dressing or bedtime routines into questions.",
     completed: false,
     duration: 0,
@@ -128,7 +128,7 @@ export const RECAST_ACTIVITY_POOL: Activity[] = [
   {
     id: 'rec-pool-4',
     title: 'Household Chores',
-    image: 'https://picsum.photos/seed/rec-chores/800/600',
+    image: '/images/activities/recast/chores.webp',
     description: "Recast while helping with chores into questions.",
     completed: false,
     duration: 0,
@@ -170,7 +170,7 @@ export const RECAST_ACTIVITY_POOL: Activity[] = [
   {
     id: 'rec-pool-5',
     title: 'Reading Together',
-    image: 'https://picsum.photos/seed/rec-reading/800/600',
+    image: '/images/activities/recast/reading.webp',
     description: "Recast descriptions of pictures or story events into questions.",
     completed: false,
     duration: 0,
@@ -211,7 +211,7 @@ export const RECAST_ACTIVITY_POOL: Activity[] = [
   {
     id: 'rec-pool-6',
     title: 'Pretend Play',
-    image: 'https://picsum.photos/seed/rec-pretend/800/600',
+    image: '/images/activities/recast/pretend.webp',
     description: "Recast during imaginative play scenarios into questions.",
     completed: false,
     duration: 0,
@@ -254,7 +254,7 @@ export const RECAST_ACTIVITY_POOL: Activity[] = [
   {
     id: 'rec-pool-7',
     title: 'Building Blocks',
-    image: 'https://picsum.photos/seed/rec-blocks/800/600',
+    image: '/images/activities/recast/blocks.webp',
     description: "Recast concepts of size, balance, and action into questions.",
     completed: false,
     duration: 0,
@@ -296,7 +296,7 @@ export const RECAST_ACTIVITY_POOL: Activity[] = [
   {
     id: 'rec-pool-8',
     title: 'Pet Care',
-    image: 'https://picsum.photos/seed/rec-pets/800/600',
+    image: '/images/activities/recast/pets.webp',
     description: "Recast observations about the pet into questions.",
     completed: false,
     duration: 0,
@@ -337,7 +337,7 @@ export const RECAST_ACTIVITY_POOL: Activity[] = [
   {
     id: 'rec-pool-9',
     title: 'Outdoor Walk',
-    image: 'https://picsum.photos/seed/rec-outdoor/800/600',
+    image: '/images/activities/recast/outdoor.webp',
     description: "Recast what you see and do outside into questions.",
     completed: false,
     duration: 0,
@@ -378,7 +378,7 @@ export const RECAST_ACTIVITY_POOL: Activity[] = [
   {
     id: 'rec-pool-10',
     title: 'Grocery Shopping',
-    image: 'https://picsum.photos/seed/rec-shopping/800/600',
+    image: '/images/activities/recast/shopping.webp',
     description: "Recast names of items and actions in the store into questions.",
     completed: false,
     duration: 0,

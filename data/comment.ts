@@ -5,7 +5,7 @@ export const COMMENT_ACTIVITY_POOL: Activity[] = [
   {
     id: 'com-pool-1',
     title: 'Making Lunch',
-    image: 'https://picsum.photos/seed/com-mealtimes/800/600',
+    image: '/images/activities/comment/mealtimes.webp',
     description: "Narrate your actions: 'I am spreading the jam. I am cutting the bread.'",
     completed: false,
     duration: 0,
@@ -22,7 +22,7 @@ export const COMMENT_ACTIVITY_POOL: Activity[] = [
   {
     id: 'com-pool-2',
     title: 'Getting Dressed',
-    image: 'https://picsum.photos/seed/com-dressing/800/600',
+    image: '/images/activities/comment/dressing.webp',
     description: "Comment on what you are doing: 'Buttoning up the shirt. Pulling on socks.'",
     completed: false,
     duration: 0,
@@ -39,7 +39,7 @@ export const COMMENT_ACTIVITY_POOL: Activity[] = [
   {
     id: 'com-pool-3',
     title: 'Driving',
-    image: 'https://picsum.photos/seed/com-traffic/800/600',
+    image: '/images/activities/comment/traffic.webp', // Assuming mapping to traffic/outdoor concept or new image if available
     description: "Narrate the drive: 'Stopping at the red light. Turning left.'",
     completed: false,
     duration: 0,
@@ -56,7 +56,7 @@ export const COMMENT_ACTIVITY_POOL: Activity[] = [
   {
     id: 'com-pool-4',
     title: 'Playground Slide',
-    image: 'https://picsum.photos/seed/com-outdoor/800/600',
+    image: '/images/activities/comment/outdoor.webp',
     description: "Comment on child's actions: 'You are climbing up up up. Sliding down!'",
     completed: false,
     duration: 0,
@@ -73,7 +73,7 @@ export const COMMENT_ACTIVITY_POOL: Activity[] = [
   {
     id: 'com-pool-5',
     title: 'Washing Dishes',
-    image: 'https://picsum.photos/seed/com-chores/800/600',
+    image: '/images/activities/comment/chores.webp',
     description: "Narrate washing: 'Scrubbing the plate. Rinse with water. Dry it off.'",
     completed: false,
     duration: 0,
@@ -90,7 +90,7 @@ export const COMMENT_ACTIVITY_POOL: Activity[] = [
   {
     id: 'com-pool-6',
     title: 'Drawing',
-    image: 'https://picsum.photos/seed/com-arts/800/600',
+    image: '/images/activities/comment/arts.webp',
     description: "Comment on your own drawing: 'I am drawing a big circle. Here are the eyes.'",
     completed: false,
     duration: 0,
@@ -107,7 +107,7 @@ export const COMMENT_ACTIVITY_POOL: Activity[] = [
   {
     id: 'com-pool-7',
     title: 'Building',
-    image: 'https://picsum.photos/seed/com-blocks/800/600',
+    image: '/images/activities/comment/blocks.webp',
     description: "Narrate building: 'Stacking the blue block. It is getting tall. Crash!'",
     completed: false,
     duration: 0,
@@ -124,7 +124,7 @@ export const COMMENT_ACTIVITY_POOL: Activity[] = [
   {
     id: 'com-pool-8',
     title: 'Petting Dog',
-    image: 'https://picsum.photos/seed/com-pets/800/600',
+    image: '/images/activities/comment/pets.webp',
     description: "Comment: 'Petting the dog softly. He is wagging his tail.'",
     completed: false,
     duration: 0,
@@ -141,7 +141,7 @@ export const COMMENT_ACTIVITY_POOL: Activity[] = [
   {
     id: 'com-pool-9',
     title: 'Vacuuming',
-    image: 'https://picsum.photos/seed/com-clean/800/600',
+    image: '/images/activities/comment/clean.webp',
     description: "Narrate sounds and actions: 'Vroom vroom. Pushing it forward. Pulling back.'",
     completed: false,
     duration: 0,
@@ -158,7 +158,7 @@ export const COMMENT_ACTIVITY_POOL: Activity[] = [
   {
     id: 'com-pool-10',
     title: 'Gardening',
-    image: 'https://picsum.photos/seed/com-nature/800/600',
+    image: '/images/activities/comment/nature.webp',
     description: "Comment: 'Digging a hole. Putting the seed in. Patting the dirt.'",
     completed: false,
     duration: 0,

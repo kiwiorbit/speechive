@@ -6,12 +6,8 @@ interface BeeLogoProps {
 }
 
 const BeeLogo: React.FC<BeeLogoProps> = ({ className }) => {
-  // --------------------------------------------------------------------------------
-  // TODO: Replace the URL below with your hosted image link (from Imgur, ImgBB, etc.)
-  // Make sure the link starts with 'https://' and ends with .png or .jpg
-  // --------------------------------------------------------------------------------
-  // Updated placeholder to a clearer bee image
-  const LOGO_URL = "https://i.imgur.com/kA6N7Ge.png"; 
+  // Update to local webp logo
+  const LOGO_URL = "/images/speechive-logo.webp"; 
 
   return (
     <img 
