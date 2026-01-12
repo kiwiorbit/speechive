@@ -5,7 +5,7 @@ export const OPENEQ_ACTIVITY_POOL: Activity[] = [
   {
     id: 'oeq-pool-1',
     title: 'Mealtimes & Snacks',
-    image: '/images/activities/openeq/mealtimes.webp',
+    image: '/public/images/activities/openeq/mealtimes.webp',
     description: "Use mealtime to ask open-ended questions about food, choices, and utensils.",
     completed: false,
     duration: 0,
@@ -46,7 +46,7 @@ export const OPENEQ_ACTIVITY_POOL: Activity[] = [
   {
     id: 'oeq-pool-2',
     title: 'Bath Time',
-    image: '/images/activities/openeq/bathtime.webp',
+    image: '/public/images/activities/openeq/bathtime.webp',
     description: "Ask about water, bubbles, and washing during bath time.",
     completed: false,
     duration: 0,
@@ -87,7 +87,7 @@ export const OPENEQ_ACTIVITY_POOL: Activity[] = [
   {
     id: 'oeq-pool-3',
     title: 'Morning or Bedtime',
-    image: '/images/activities/openeq/dressing.webp',
+    image: '/public/images/activities/openeq/dressing.webp',
     description: "Ask questions about clothing choices and routines.",
     completed: false,
     duration: 0,
@@ -128,7 +128,7 @@ export const OPENEQ_ACTIVITY_POOL: Activity[] = [
   {
     id: 'oeq-pool-4',
     title: 'Household Chores',
-    image: '/images/activities/openeq/chores.webp',
+    image: '/public/images/activities/openeq/chores.webp',
     description: "Involve the child in sorting laundry or tidying up.",
     completed: false,
     duration: 0,
@@ -169,7 +169,7 @@ export const OPENEQ_ACTIVITY_POOL: Activity[] = [
   {
     id: 'oeq-pool-5',
     title: 'Reading Together',
-    image: '/images/activities/openeq/reading.webp',
+    image: '/public/images/activities/openeq/reading.webp',
     description: "Ask about characters and events in a book.",
     completed: false,
     duration: 0,
@@ -210,7 +210,7 @@ export const OPENEQ_ACTIVITY_POOL: Activity[] = [
   {
     id: 'oeq-pool-6',
     title: 'Pretend Play',
-    image: '/images/activities/openeq/pretend.webp',
+    image: '/public/images/activities/openeq/pretend.webp',
     description: "Join in imaginative play with dolls, cars, or kitchen sets.",
     completed: false,
     duration: 0,
@@ -251,7 +251,7 @@ export const OPENEQ_ACTIVITY_POOL: Activity[] = [
   {
     id: 'oeq-pool-7',
     title: 'Building Blocks',
-    image: '/images/activities/openeq/blocks.webp',
+    image: '/public/images/activities/openeq/blocks.webp',
     description: "Build towers or structures together. Ask questions about size and position.",
     completed: false,
     duration: 0,
@@ -292,7 +292,7 @@ export const OPENEQ_ACTIVITY_POOL: Activity[] = [
   {
     id: 'oeq-pool-8',
     title: 'Pet Care',
-    image: '/images/activities/openeq/pets.webp',
+    image: '/public/images/activities/openeq/pets.webp',
     description: "Involve your child in feeding or grooming a pet.",
     completed: false,
     duration: 0,
@@ -333,7 +333,7 @@ export const OPENEQ_ACTIVITY_POOL: Activity[] = [
   {
     id: 'oeq-pool-9',
     title: 'Outdoor Walk',
-    image: '/images/activities/openeq/outdoor.webp',
+    image: '/public/images/activities/openeq/outdoor.webp',
     description: "Explore nature, the park, or the backyard. Ask about what you see.",
     completed: false,
     duration: 0,
@@ -374,7 +374,7 @@ export const OPENEQ_ACTIVITY_POOL: Activity[] = [
   {
     id: 'oeq-pool-10',
     title: 'Grocery Shopping',
-    image: '/images/activities/openeq/shopping.webp',
+    image: '/public/images/activities/openeq/shopping.webp',
     description: "Turn a shopping trip into a language lesson.",
     completed: false,
     duration: 0,
