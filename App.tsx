@@ -43,7 +43,7 @@ import { NAV_ITEMS, THIRTY_DAY_CHALLENGE, NATURALISTIC_STRATEGIES, EDUCATION_LEV
 
 // --- DEV TOGGLE: Set to true to skip onboarding and load dummy data ---
 const SKIP_ONBOARDING = false; 
-const DEV_BYPASS_REDEEM_REQUIREMENTS = false; // Set to true to allow redeeming without sufficient drops
+const DEV_BYPASS_REDEEM_REQUIREMENTS = true; // Set to true to allow redeeming without sufficient drops
 
 const DUMMY_USER: UserInfo = {
   caregiverName: "Dev Parent",
