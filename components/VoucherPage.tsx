@@ -6,7 +6,7 @@ import Card from './Card';
 import { BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer, CartesianGrid, Cell } from 'recharts';
 
 // --- DEV TOGGLE ---
-const DEV_SHOW_DUMMY_CERTIFICATE_DATA = true; // Set to true to populate charts with 30-day dummy data
+const DEV_SHOW_DUMMY_CERTIFICATE_DATA = false; // Set to true to populate charts with 30-day dummy data
 
 interface VoucherPageProps {
   voucher: VoucherInfo;
