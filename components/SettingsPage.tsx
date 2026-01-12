@@ -63,13 +63,14 @@ interface SettingsPageProps {
     areAnimationsEnabled?: boolean;
     toggleAnimations?: () => void;
     userInfo: UserInfo | null;
-    onUpgrade?: (code: string) => void;
+    onUpgrade?: (code: string, email?: string) => void;
 }
 
 const SettingsPage: React.FC<SettingsPageProps> = ({ onResetProgress, setActivePage, areAnimationsEnabled, toggleAnimations, userInfo, onUpgrade }) => {
     const [openFaqId, setOpenFaqId] = useState<number | null>(0);
     const [isResetModalOpen, setResetModalOpen] = useState(false);
     const [programCode, setProgramCode] = useState('');
+    const [upgradeEmail, setUpgradeEmail] = useState('');
     const [showCodeInput, setShowCodeInput] = useState(false);
 
     const handleFaqToggle = (id: number) => {
@@ -82,8 +83,18 @@ const SettingsPage: React.FC<SettingsPageProps> = ({ onResetProgress, setActiveP
     };
 
     const handleUpgradeSubmit = () => {
-        if(programCode && onUpgrade) {
-            onUpgrade(programCode.toUpperCase());
+        // Validate inputs
+        if (!programCode) return;
+
+        // If user doesn't have an email (Guest), require it now
+        const isGuest = !userInfo?.email;
+        if (isGuest && (!upgradeEmail || !upgradeEmail.includes('@'))) {
+            alert("Please enter a valid email address to join the program.");
+            return;
+        }
+
+        if (onUpgrade) {
+            onUpgrade(programCode.toUpperCase(), upgradeEmail);
             setShowCodeInput(false);
             alert("Success! You are now part of the Family Support Program.");
         }
@@ -111,7 +122,7 @@ const SettingsPage: React.FC<SettingsPageProps> = ({ onResetProgress, setActiveP
               <div>
                   <div className="flex items-center text-gray-600 mb-3">
                       <i className="fas fa-user mr-3"></i>
-                      <p>Community Member</p>
+                      <p>Community Member {userInfo?.email ? '' : '(Guest)'}</p>
                   </div>
                   {!showCodeInput ? (
                       <button 
@@ -121,20 +132,39 @@ const SettingsPage: React.FC<SettingsPageProps> = ({ onResetProgress, setActiveP
                         I have a Program Access Code
                       </button>
                   ) : (
-                      <div className="mt-2 flex gap-2">
-                          <input 
-                            type="text" 
-                            value={programCode}
-                            onChange={(e) => setProgramCode(e.target.value)}
-                            placeholder="Enter Code"
-                            className="flex-1 bg-white border border-gray-300 rounded px-3 py-1 text-sm text-gray-800 focus:outline-none focus:border-amber-500"
-                          />
-                          <button 
-                            onClick={handleUpgradeSubmit}
-                            className="bg-amber-500 text-white px-3 py-1 rounded text-sm font-bold"
-                          >
-                            Join
-                          </button>
+                      <div className="mt-2 space-y-3">
+                          {/* If Guest (no email), show email input */}
+                          {!userInfo?.email && (
+                              <div>
+                                  <label className="block text-xs text-gray-500 mb-1 ml-1">Email Address (Required for verification)</label>
+                                  <input 
+                                    type="email" 
+                                    value={upgradeEmail}
+                                    onChange={(e) => setUpgradeEmail(e.target.value)}
+                                    placeholder="e.g. name@email.com"
+                                    className="w-full bg-white border border-gray-300 rounded px-3 py-2 text-sm text-gray-800 focus:outline-none focus:border-amber-500"
+                                  />
+                              </div>
+                          )}
+                          
+                          <div>
+                              <label className="block text-xs text-gray-500 mb-1 ml-1">Access Code</label>
+                              <div className="flex gap-2">
+                                  <input 
+                                    type="text" 
+                                    value={programCode}
+                                    onChange={(e) => setProgramCode(e.target.value)}
+                                    placeholder="Enter Code"
+                                    className="flex-1 bg-white border border-gray-300 rounded px-3 py-2 text-sm text-gray-800 focus:outline-none focus:border-amber-500"
+                                  />
+                                  <button 
+                                    onClick={handleUpgradeSubmit}
+                                    className="bg-amber-500 text-white px-4 py-2 rounded text-sm font-bold shadow-sm hover:bg-amber-600 transition-colors"
+                                  >
+                                    Join
+                                  </button>
+                              </div>
+                          </div>
                       </div>
                   )}
               </div>
