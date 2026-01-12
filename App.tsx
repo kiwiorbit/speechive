@@ -39,11 +39,7 @@ import ActivityDetail from './components/ActivityDetail';
 import HoneyStoreUnlockModal from './components/HoneyStoreUnlockModal';
 
 import { Page, DailyChallenge, TimerState, UserInfo, Article, NaturalisticStrategyType, StrategyChallenge, VoucherInfo, HearingHistory, Activity } from './types';
-import { NAV_ITEMS, THIRTY_DAY_CHALLENGE, NATURALISTIC_STRATEGIES, EDUCATION_LEVELS, HOME_LANGUAGES } from './constants';
-
-// --- DEV TOGGLE: Set to true to skip onboarding and load dummy data ---
-const SKIP_ONBOARDING = false; 
-const DEV_BYPASS_REDEEM_REQUIREMENTS = false; // Set to true to allow redeeming without sufficient drops
+import { NAV_ITEMS, THIRTY_DAY_CHALLENGE, NATURALISTIC_STRATEGIES, EDUCATION_LEVELS, HOME_LANGUAGES, IS_DEV_MODE } from './constants';
 
 const DUMMY_USER: UserInfo = {
   caregiverName: "Dev Parent",
@@ -119,7 +115,7 @@ const App: React.FC = () => {
   useEffect(() => {
     const loadData = () => {
       // Check Dev Toggle
-      if (SKIP_ONBOARDING) {
+      if (IS_DEV_MODE) {
         console.log("⚠️ DEV MODE: Skipping Onboarding with Dummy Data");
         setUserInfo(DUMMY_USER);
         setShowLanding(false);
@@ -455,7 +451,7 @@ const App: React.FC = () => {
     // Check if user has already redeemed this strategy (has a timestamp)
     const isAlreadyRedeemed = !!userInfo.redeemedStrategies?.[strategyType];
 
-    if (completedCount < MIN_ACTIVITIES && !DEV_BYPASS_REDEEM_REQUIREMENTS) {
+    if (completedCount < MIN_ACTIVITIES && !IS_DEV_MODE) {
         alert(`You need to complete at least ${MIN_ACTIVITIES} activities to claim your certificate. Current: ${completedCount}`);
         return;
     }
@@ -465,7 +461,7 @@ const App: React.FC = () => {
     const costInDrops = completedCount * 15; 
 
     // Only deduct drops if NOT already redeemed
-    if (!isAlreadyRedeemed && userInfo.honeyDrops < costInDrops && !DEV_BYPASS_REDEEM_REQUIREMENTS) {
+    if (!isAlreadyRedeemed && userInfo.honeyDrops < costInDrops && !IS_DEV_MODE) {
         alert("You don't have enough Honey Drops to redeem this certificate.");
         return;
     }
